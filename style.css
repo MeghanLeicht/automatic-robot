@@ -1,0 +1,54 @@
+/* CSS custom properties / CSS variables */
+
+:root {
+  --darkmagenta: #8b008b;
+  --magenta: #ff00ff;
+  --royalblue: #4169e1;
+  --teal: #008080;
+  --violet: #9400d3;
+}
+
+/* Use attribute selectors for the first part of the exercise */
+
+/* ~Existence~ */
+/* li[class] {
+  color: var(--red);
+} */
+
+/* ~Suffix~ */
+/* dog and hedgehog both end in g */
+li[class$="g"] {
+  color: var(--violet) !important; /*or move below li[class*="do"]*/
+}
+
+li[id="cat"] {
+  color: var(--teal);
+}
+
+/* ~Prefix~ */
+/* only thing that stars with p is parrot */
+li[class^="p"] {
+  color: var(--green);
+}
+
+/* ~Substring~ */
+li[class*="do"] {
+  color: var(--royalblue);
+}
+
+/* Use descendant, child, and sibling selectors for the second part */
+
+section li {
+  color: var(--green);
+}
+
+/* General sibling selector */
+/* makes all the siblings of first violet */
+.first ~ li {
+  color: var(--violet);
+}
+
+/* Imediate adjacent sibling selector */
+.second + li {
+  color: var(--royalblue);
+}
